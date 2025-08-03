@@ -28,15 +28,25 @@ const ContentOverlay = styled(motion.div)`
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 2rem;
-    gap: 2rem;
+    grid-template-rows: auto 1fr;
+    padding: 1rem;
+    gap: 1rem;
     text-align: center;
+    align-items: start;
+    justify-items: center;
   }
 `;
 
 const LeftSection = styled(motion.div)`
   z-index: 2;
   position: relative;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
 `;
 
 const RightSection = styled(motion.div)`
@@ -46,6 +56,11 @@ const RightSection = styled(motion.div)`
   justify-content: center;
   align-items: center;
   pointer-events: none;
+
+  @media (max-width: 768px) {
+    order: -1;
+    margin-bottom: 1rem;
+  }
 `;
 
 const CircularHero = styled(motion.div)`
@@ -88,21 +103,21 @@ const CircularHero = styled(motion.div)`
   }
   
   @media (max-width: 768px) {
-    width: 350px;
-    height: 350px;
-    
+    width: 280px;
+    height: 280px;
+
     &::before {
-      width: 60px;
-      height: 60px;
-      top: -15px;
-      right: -15px;
+      width: 50px;
+      height: 50px;
+      top: -10px;
+      right: -10px;
     }
-    
+
     &::after {
-      width: 45px;
-      height: 45px;
-      bottom: -20px;
-      left: -20px;
+      width: 35px;
+      height: 35px;
+      bottom: -15px;
+      left: -15px;
     }
   }
 `;
@@ -121,8 +136,8 @@ const DeveloperContainer = styled(motion.div)`
   }
   
   @media (max-width: 768px) {
-    width: 350px;
-    height: 350px;
+    width: 280px;
+    height: 280px;
   }
 `;
 
@@ -223,6 +238,13 @@ const Description = styled(motion.p)`
   padding: 1.5rem;
   border-radius: 15px;
   border: 1px solid ${props => props.theme.chrome}30;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    max-width: 90%;
+  }
 `;
 
 const ButtonGroup = styled(motion.div)`
