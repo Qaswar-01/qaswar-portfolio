@@ -1,0 +1,108 @@
+/* Text Readability Enhancement Utilities */
+
+/* Dashboard specific text improvements */
+.dashboard-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.9);
+  letter-spacing: -0.02em;
+}
+
+.dashboard-card-title {
+  font-weight: 600;
+  color: #2d1f1a;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.01em;
+}
+
+.dashboard-amount {
+  font-family: 'Inter', monospace;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #000000;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.05em;
+  font-variant-numeric: tabular-nums;
+}
+
+.dashboard-label {
+  font-weight: 500;
+  color: #5a453d;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+}
+
+.dashboard-date {
+  font-weight: 400;
+  color: #8a7066;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+}
+
+/* High contrast mode for better visibility */
+.high-contrast {
+  color: #000000 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 1) !important;
+  font-weight: 700 !important;
+}
+
+/* Glass effect text with better readability */
+.glass-readable {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Text on colored backgrounds */
+.text-on-terracotta {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(45, 31, 26, 0.8);
+  font-weight: 600;
+}
+
+.text-on-forest {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+}
+
+.text-on-clay {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+}
+
+/* Image sharpness improvements */
+.sharp-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Dashboard image specific improvements */
+.dashboard-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  filter: contrast(1.1) brightness(1.05);
+}
+
+/* Container for crisp image display */
+.crisp-container {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}

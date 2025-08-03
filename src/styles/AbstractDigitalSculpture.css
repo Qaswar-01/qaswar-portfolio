@@ -1,0 +1,298 @@
+.sculpture-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 50%, #1976d2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Soft spotlighting effect */
+.sculpture-container::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sculpture-wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  transform-style: preserve-3d;
+  z-index: 2;
+}
+
+/* Interlinked Rings */
+.ring-group {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.ring {
+  position: absolute;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #00bcd4, #9c27b0, #4caf50);
+  background-clip: padding-box;
+  box-shadow: 
+    0 0 20px rgba(0, 188, 212, 0.5),
+    inset 0 0 20px rgba(156, 39, 176, 0.3);
+  animation: rotateRing 8s linear infinite;
+}
+
+.ring::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(45deg, #00bcd4, #9c27b0, #4caf50);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+.ring-1 {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg);
+  animation-delay: 0s;
+}
+
+.ring-2 {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%, -50%) rotateX(60deg) rotateY(30deg);
+  animation-delay: -2s;
+}
+
+.ring-3 {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  left: 40%;
+  transform: translate(-50%, -50%) rotateX(-45deg) rotateY(60deg);
+  animation-delay: -4s;
+}
+
+/* Crystal Shards */
+.crystal-group {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.crystal {
+  position: absolute;
+  background: linear-gradient(135deg, 
+    rgba(0, 188, 212, 0.8) 0%, 
+    rgba(156, 39, 176, 0.6) 50%, 
+    rgba(76, 175, 80, 0.8) 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  box-shadow: 
+    0 0 15px rgba(0, 188, 212, 0.6),
+    inset 0 0 10px rgba(255, 255, 255, 0.2);
+  animation: crystalFloat 5s ease-in-out infinite;
+}
+
+.crystal-1 {
+  width: 60px;
+  height: 80px;
+  top: 20%;
+  left: 30%;
+  transform: rotateZ(15deg) rotateX(20deg);
+  animation-delay: 0s;
+}
+
+.crystal-2 {
+  width: 45px;
+  height: 60px;
+  top: 70%;
+  left: 70%;
+  transform: rotateZ(-30deg) rotateY(45deg);
+  animation-delay: -1s;
+}
+
+.crystal-3 {
+  width: 35px;
+  height: 50px;
+  top: 15%;
+  left: 75%;
+  transform: rotateZ(45deg) rotateX(-30deg);
+  animation-delay: -2s;
+}
+
+.crystal-4 {
+  width: 50px;
+  height: 70px;
+  top: 80%;
+  left: 20%;
+  transform: rotateZ(-15deg) rotateY(-20deg);
+  animation-delay: -3s;
+}
+
+/* Floating Lines */
+.lines-group {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.line {
+  position: absolute;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 188, 212, 0.8) 20%, 
+    rgba(156, 39, 176, 0.8) 50%, 
+    rgba(76, 175, 80, 0.8) 80%, 
+    transparent 100%);
+  height: 2px;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+  animation: lineFlow 4s ease-in-out infinite;
+}
+
+.line-1 {
+  width: 150px;
+  top: 25%;
+  left: 10%;
+  transform: rotateZ(25deg) rotateY(30deg);
+  animation-delay: 0s;
+}
+
+.line-2 {
+  width: 120px;
+  top: 60%;
+  left: 60%;
+  transform: rotateZ(-15deg) rotateX(45deg);
+  animation-delay: -1s;
+}
+
+.line-3 {
+  width: 100px;
+  top: 40%;
+  left: 80%;
+  transform: rotateZ(60deg) rotateY(-30deg);
+  animation-delay: -2s;
+}
+
+.line-4 {
+  width: 80px;
+  top: 75%;
+  left: 40%;
+  transform: rotateZ(-45deg) rotateX(-20deg);
+  animation-delay: -3s;
+}
+
+.line-5 {
+  width: 110px;
+  top: 10%;
+  left: 50%;
+  transform: rotateZ(0deg) rotateY(60deg);
+  animation-delay: -1.5s;
+}
+
+/* Connecting Elements */
+.connector-group {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.connector {
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(180deg, 
+    rgba(0, 188, 212, 0.6) 0%, 
+    rgba(156, 39, 176, 0.4) 50%, 
+    rgba(76, 175, 80, 0.6) 100%);
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.6);
+  animation: connectorPulse 3s ease-in-out infinite;
+}
+
+.connector-1 {
+  height: 180px;
+  top: 20%;
+  left: 48%;
+  transform: rotateZ(30deg) rotateX(20deg);
+  animation-delay: 0s;
+}
+
+.connector-2 {
+  height: 140px;
+  top: 40%;
+  left: 52%;
+  transform: rotateZ(-20deg) rotateY(40deg);
+  animation-delay: -1.5s;
+}
+
+/* Animations */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px) rotateY(0deg); }
+  50% { transform: translateY(-10px) rotateY(5deg); }
+}
+
+@keyframes rotateRing {
+  0% { transform: translate(-50%, -50%) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) rotateZ(0deg); }
+  100% { transform: translate(-50%, -50%) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) rotateZ(360deg); }
+}
+
+@keyframes crystalFloat {
+  0%, 100% { 
+    transform: rotateZ(var(--rz, 0deg)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(0px); 
+    opacity: 0.8;
+  }
+  50% { 
+    transform: rotateZ(var(--rz, 0deg)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-8px); 
+    opacity: 1;
+  }
+}
+
+@keyframes lineFlow {
+  0%, 100% { 
+    opacity: 0.6; 
+    transform: rotateZ(var(--rz, 0deg)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) scaleX(1);
+  }
+  50% { 
+    opacity: 1; 
+    transform: rotateZ(var(--rz, 0deg)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) scaleX(1.1);
+  }
+}
+
+@keyframes connectorPulse {
+  0%, 100% { 
+    opacity: 0.6; 
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.6);
+  }
+  50% { 
+    opacity: 1; 
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.9);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sculpture-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .ring-1 { width: 150px; height: 150px; }
+  .ring-2 { width: 110px; height: 110px; }
+  .ring-3 { width: 90px; height: 90px; }
+}
