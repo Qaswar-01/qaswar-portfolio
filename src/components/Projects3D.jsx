@@ -545,6 +545,18 @@ const ProjectLink = styled(motion.a)`
 
 const projects = [
   {
+    title: "EliteShop - Premium E-Commerce Experience",
+    description: "Premium e-commerce platform with PWA capabilities and smooth animations",
+    fullDescription: "EliteShop is a premium e-commerce experience built with modern React and enhanced with Progressive Web App (PWA) capabilities. The platform features smooth Framer Motion animations, responsive design, product catalog browsing, shopping cart functionality, and an intuitive user interface. Built with performance and user experience in mind, EliteShop delivers a seamless shopping experience across all devices.",
+    image: "/EliteShop.PNG",
+    icon: ShoppingCart,
+    color: "#6366f1",
+    color2: "#8b5cf6",
+    tags: ["React", "JavaScript", "PWA", "Framer Motion"],
+    liveUrl: "https://elite-shop-six.vercel.app/",
+    githubUrl: "https://github.com/Qaswar-01/EliteShop---Premium-E-Commerce-Experience"
+  },
+  {
     title: "LearnHub",
     description: "Interactive learning platform with modern UI and comprehensive course management",
     fullDescription: "LearnHub is a comprehensive learning management system built with modern web technologies. It features interactive course content, progress tracking, user authentication, and a responsive design that works seamlessly across all devices. The platform includes features like course enrollment, progress tracking, and interactive learning modules.",
