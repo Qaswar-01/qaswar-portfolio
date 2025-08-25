@@ -544,30 +544,30 @@ const ProjectLink = styled(motion.a)`
 `;
 
 const projects = [
-  {
-    title: "EliteShop - Premium E-Commerce Experience",
-    description: "Premium e-commerce platform with PWA capabilities and smooth animations",
-    fullDescription: "EliteShop is a premium e-commerce experience built with modern React and enhanced with Progressive Web App (PWA) capabilities. The platform features smooth Framer Motion animations, responsive design, product catalog browsing, shopping cart functionality, and an intuitive user interface. Built with performance and user experience in mind, EliteShop delivers a seamless shopping experience across all devices.",
-    image: "/EliteShop.PNG",
-    icon: ShoppingCart,
-    color: "#6366f1",
-    color2: "#8b5cf6",
-    tags: ["React", "JavaScript", "PWA", "Framer Motion"],
-    liveUrl: "https://elite-shop-six.vercel.app/",
-    githubUrl: "https://github.com/Qaswar-01/EliteShop---Premium-E-Commerce-Experience"
-  },
-  {
-    title: "LearnHub",
-    description: "Interactive learning platform with modern UI and comprehensive course management",
-    fullDescription: "LearnHub is a comprehensive learning management system built with modern web technologies. It features interactive course content, progress tracking, user authentication, and a responsive design that works seamlessly across all devices. The platform includes features like course enrollment, progress tracking, and interactive learning modules.",
-    image: "/learnhub.PNG",
-    icon: BarChart3,
-    color: "#667eea",
-    color2: "#764ba2",
-    tags: ["React", "Node.js", "MongoDB", "Express"],
-    liveUrl: "https://learnhub-xi.vercel.app",
-    githubUrl: "https://github.com/Qaswar-01/LearnHub"
-  },
+  // {
+  //   title: "EliteShop - Premium E-Commerce Experience",
+  //   description: "Premium e-commerce platform with PWA capabilities and smooth animations",
+  //   fullDescription: "EliteShop is a premium e-commerce experience built with modern React and enhanced with Progressive Web App (PWA) capabilities. The platform features smooth Framer Motion animations, responsive design, product catalog browsing, shopping cart functionality, and an intuitive user interface. Built with performance and user experience in mind, EliteShop delivers a seamless shopping experience across all devices.",
+  //   image: "/EliteShop.PNG",
+  //   icon: ShoppingCart,
+  //   color: "#6366f1",
+  //   color2: "#8b5cf6",
+  //   tags: ["React", "JavaScript", "PWA", "Framer Motion"],
+  //   liveUrl: "https://elite-shop-six.vercel.app/",
+  //   githubUrl: "https://github.com/Qaswar-01/EliteShop---Premium-E-Commerce-Experience"
+  // },
+  // {
+  //   title: "LearnHub",
+  //   description: "Interactive learning platform with modern UI and comprehensive course management",
+  //   fullDescription: "LearnHub is a comprehensive learning management system built with modern web technologies. It features interactive course content, progress tracking, user authentication, and a responsive design that works seamlessly across all devices. The platform includes features like course enrollment, progress tracking, and interactive learning modules.",
+  //   image: "/learnhub.PNG",
+  //   icon: BarChart3,
+  //   color: "#667eea",
+  //   color2: "#764ba2",
+  //   tags: ["React", "Node.js", "MongoDB", "Express"],
+  //   liveUrl: "https://learnhub-xi.vercel.app",
+  //   githubUrl: "https://github.com/Qaswar-01/LearnHub"
+  // },
   {
     title: "Shophub E-Commerce",
     description: "Modern e-commerce platform with shopping cart and product management",
@@ -591,19 +591,19 @@ const projects = [
     tags: ["React", "JavaScript", "CSS3", "Local Storage"],
     liveUrl: "https://easy-split-eight.vercel.app/",
     githubUrl: "https://github.com/Qaswar-01/EasySplit"
-  },
-  {
-    title: "YumYum Food Delivery",
-    description: "Modern food delivery platform with real-time ordering and tracking",
-    fullDescription: "YumYum is a comprehensive food delivery application built with modern web technologies. It features restaurant browsing, menu management, cart functionality, order tracking, and user authentication. The platform provides a seamless food ordering experience with intuitive navigation and responsive design.",
-    image: "/YumYum.PNG",
-    icon: Users,
-    color: "#ff6b6b",
-    color2: "#feca57",
-    tags: ["React", "Node.js", "Express", "MongoDB"],
-    liveUrl: "https://yumyum-food-delivery.vercel.app/",
-    githubUrl: "https://github.com/Qaswar-01/YumYum-Food-Delivery"
   }
+  // {
+  //   title: "YumYum Food Delivery",
+  //   description: "Modern food delivery platform with real-time ordering and tracking",
+  //   fullDescription: "YumYum is a comprehensive food delivery application built with modern web technologies. It features restaurant browsing, menu management, cart functionality, order tracking, and user authentication. The platform provides a seamless food ordering experience with intuitive navigation and responsive design.",
+  //   image: "/YumYum.PNG",
+  //   icon: Users,
+  //   color: "#ff6b6b",
+  //   color2: "#feca57",
+  //   tags: ["React", "Node.js", "Express", "MongoDB"],
+  //   liveUrl: "https://yumyum-food-delivery.vercel.app/",
+  //   githubUrl: "https://github.com/Qaswar-01/YumYum-Food-Delivery"
+  // }
 ];
 
 const Projects3D = () => {
