@@ -29,11 +29,20 @@ const ContentOverlay = styled(motion.div)`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    padding: 1rem;
-    gap: 1rem;
+    padding: 0.5rem;
+    gap: 0.5rem;
     text-align: center;
     align-items: start;
     justify-items: center;
+    overflow-y: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 `;
 
@@ -46,6 +55,12 @@ const LeftSection = styled(motion.div)`
     flex-direction: column;
     align-items: center;
     max-width: 100%;
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem;
   }
 `;
 
@@ -255,6 +270,14 @@ const ButtonGroup = styled(motion.div)`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.5rem;
+    max-width: 280px;
   }
 `;
 
@@ -269,12 +292,14 @@ const PrimaryButton = styled(motion.button)`
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(20px);
   box-shadow: 0 8px 32px ${props => props.theme.shadow};
+  white-space: nowrap;
 
   &::before {
     content: '';
@@ -295,6 +320,17 @@ const PrimaryButton = styled(motion.button)`
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 15px 40px ${props => props.theme.shadowHover};
   }
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
 `;
 
 const SecondaryButton = styled(motion.button)`
@@ -309,8 +345,10 @@ const SecondaryButton = styled(motion.button)`
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
+  white-space: nowrap;
 
   &:hover {
     background: ${props => props.theme.accent};
@@ -318,11 +356,32 @@ const SecondaryButton = styled(motion.button)`
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 15px 40px ${props => props.theme.accent}30;
   }
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
 `;
 
 const SocialLinks = styled(motion.div)`
   display: flex;
   gap: 1rem;
+  justify-content: center;
+  
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 1rem;
+  }
 `;
 
 const SocialLink = styled(motion.a)`
@@ -345,6 +404,16 @@ const SocialLink = styled(motion.a)`
     color: white;
     transform: translateY(-3px) scale(1.1);
     box-shadow: 0 10px 30px ${props => props.theme.shadowHover};
+  }
+  
+  @media (max-width: 768px) {
+    width: 55px;
+    height: 55px;
+  }
+  
+  @media (max-width: 480px) {
+    width: 45px;
+    height: 45px;
   }
 `;
 
