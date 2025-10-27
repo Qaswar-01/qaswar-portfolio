@@ -49,14 +49,17 @@ const ContentOverlay = styled(motion.div)`
 const LeftSection = styled(motion.div)`
   z-index: 2;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     max-width: 100%;
     padding: 1rem;
     width: 100%;
+    text-align: center;
   }
   
   @media (max-width: 480px) {
@@ -265,7 +268,8 @@ const Description = styled(motion.p)`
 const ButtonGroup = styled(motion.div)`
   display: flex;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
   
   @media (max-width: 768px) {
     flex-direction: column;
@@ -273,11 +277,13 @@ const ButtonGroup = styled(motion.div)`
     gap: 0.75rem;
     width: 100%;
     max-width: 300px;
+    margin-bottom: 1.5rem;
   }
   
   @media (max-width: 480px) {
     gap: 0.5rem;
     max-width: 280px;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -372,21 +378,26 @@ const SecondaryButton = styled(motion.button)`
 const SocialLinks = styled(motion.div)`
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.5rem;
   
   @media (max-width: 768px) {
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 1.25rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
   }
   
   @media (max-width: 480px) {
     gap: 1rem;
+    margin-top: 0.75rem;
   }
 `;
 
 const SocialLink = styled(motion.a)`
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: ${props => props.theme.surfaceGlass};
   backdrop-filter: blur(20px);
@@ -397,23 +408,41 @@ const SocialLink = styled(motion.a)`
   color: ${props => props.theme.text};
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 16px ${props => props.theme.shadow};
+  box-shadow: 0 3px 12px ${props => props.theme.shadow};
+  position: relative;
+  z-index: 1;
 
   &:hover {
     background: ${props => props.theme.gradient};
     color: white;
-    transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 10px 30px ${props => props.theme.shadowHover};
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px ${props => props.theme.shadowHover};
+    z-index: 2;
+  }
+  
+  svg {
+    width: 20px;
+    height: 20px;
   }
   
   @media (max-width: 768px) {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
+    
+    svg {
+      width: 22px;
+      height: 22px;
+    }
   }
   
   @media (max-width: 480px) {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
+    
+    svg {
+      width: 18px;
+      height: 18px;
+    }
   }
 `;
 
