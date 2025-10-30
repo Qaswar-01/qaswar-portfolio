@@ -601,8 +601,8 @@ const projects = [
     color: "#ff6b6b",
     color2: "#feca57",
     tags: ["React", "Node.js", "Express", "MongoDB"],
-    liveUrl: "https://yumyum-food-delivery.vercel.app/",
-    githubUrl: "https://github.com/Qaswar-01/YumYum-Food-Delivery"
+    liveUrl: "https://yumyum-food.vercel.app/",
+    githubUrl: "https://github.com/Qaswar-01/yumyum-food"
   }
 ];
 
